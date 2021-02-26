@@ -8,11 +8,14 @@
 
 .Wrapper {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .Title {
   font-family: 'QuincyCF';
-  font-size: 20px;
+  font-size: 30px;
 }
 
 @media(max-width: 350px){

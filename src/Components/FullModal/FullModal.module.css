@@ -1,0 +1,70 @@
+.PopUpFullModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: 100%;
+  background: #807d7dd9;
+  bottom: 0;
+}
+
+.ContainerModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.TitleModal {
+  text-align: center;
+  font-family: "CooperBT";
+  font-size: 26px;
+  max-width: 450px;
+}
+
+.BodyModal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Button {
+  display: inline-block;
+  font-family: ModernEra;
+  border-radius: 8px;
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 1px #979797;
+  background-color:#0752f9;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  margin: 40px 4px 0;
+}
+
+.Close {
+  outline: none;
+  cursor: pointer;
+}
+
+.Close > img{
+  width: 15px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

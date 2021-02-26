@@ -1,0 +1,126 @@
+
+.ErrorMessage {
+  color: red;
+  font-family: 'ModernEra';
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e02020;
+}
+
+.Input {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+  font-family: "ModernEra";
+}
+
+.Input .Label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 15px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  font-family: "ModernEra";
+}
+
+.Input .Border {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  font-family: "ModernEra";
+}
+
+.Input input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  font-family: "ModernEra";
+}
+
+.InputElement{
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  font-family: "ModernEra";
+}
+
+.Input input:hover {
+  background: rgba(34, 50, 84, 0.03);
+  box-sizing: border-box;
+}
+
+.Input input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-30px) scale(0.75);
+  box-sizing: border-box;
+}
+
+.Input input:focus {
+  background: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.Input input:focus + span {
+  color: #07f;
+  transform: translateY(-30px) scale(0.75);
+  box-sizing: border-box;
+}
+
+.Input input:focus + span + .Border {
+  transform: scaleX(1);
+  box-sizing: border-box;
+}
+
+label {
+  font-size: 16px;
+}
+
+.Form {
+  margin-top: 4%;
+  width: 310px;
+}
+
+@media (max-width: 350px) {
+  .Input .Label {
+    font-size: 13px;
+  }
+}
+    
