@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'ModernEra';
+    src: url("./Assets/fonts/ModerEra/ModernEraRegular.ttf");
+}
+
+@font-face {
+    font-family: 'ModernEraMono';
+    src: url("./Assets/fonts/ModerEra/ModernEraMonoRegular.ttf");
+}
+
+@font-face {
+    font-family: 'ModernEraMonoBold';
+    src: url("./Assets/fonts/ModerEra/ModernEraMonoBold.ttf");
+}
+
+@font-face {
+    font-family: 'ModernEraBold';
+    src: url("./Assets/fonts/ModerEra/ModernEraBold.ttf");
+}
+
+@font-face {
+    font-family: 'CooperBT';
+    src: url("./Assets/fonts/Cooper/CooperLtBT-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'QuincyCFBold';
+    src: url("./Assets/fonts/QuincyCF/QuincyCF-Bold.woff");
+}
+
+@font-face {
+    font-family: 'QuincyCFMedium';
+    src: url("./Assets/fonts/QuincyCF/QuincyCF-Medium.woff");
+}
+
+@font-face {
+    font-family: 'QuincyCF';
+    src: url("./Assets/fonts/QuincyCF/QuincyCF-Regular.woff");
+}
+
+@font-face {
+    font-family: 'QuincyCFItalic';
+    src: url("./Assets/fonts/QuincyCF/QuincyCF-RegularItalic.woff");
+}
+
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
