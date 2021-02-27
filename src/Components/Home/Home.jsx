@@ -5,9 +5,10 @@ import moment from 'moment'
 import Card from '../Card/Card'
 import messages from './Home.messages'
 import styles from './Home.module.css'
-import { getVehicles, updateVehicles } from '../Api/Request'
+import { getVehicles, updateVehicles } from '../../Api/Request'
 import FullModal from '../FullModal/FullModal'
 import Loader from '../Loader/Loader'
+import Alert from '../Alert/Alert'
 
 /**
  * Home Component
@@ -24,6 +25,7 @@ const Home = () => {
   const [date, setDate] = useState('')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
 
   useEffect(() => {
     getVehicles(success, errorResponse)
@@ -70,6 +72,10 @@ const Home = () => {
       updateVehicles(data, () => {
         closeModal()
         getVehicles(success, error)
+        const message = messages.saveSuccess.replace('{person}', person)
+          .replace('{date}', dateText)
+          .replace('{id}', currentItem.id)
+        setShowAlert(message)
       },
       (err) => {
         setResponse(err)
@@ -130,6 +136,10 @@ const Home = () => {
 
   return (
     <div className={styles.Container}>
+      <Alert
+        setShowAlert={setShowAlert}
+        showAlert={showAlert}
+      />
       <FullModal
         person={person}
         validatePerson={validatePerson}
