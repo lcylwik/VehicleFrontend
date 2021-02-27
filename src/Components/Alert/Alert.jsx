@@ -17,9 +17,6 @@ const Alert = ({ setShowAlert, showAlert }) => {
         clearTimeout(timer.current)
       }, 7000)
     }
-    return () => {
-      clearInterval(timer.current)
-    }
   }, [showAlert, setShowAlert])
 
   if (!showAlert) {
