@@ -12,6 +12,7 @@ const Card = ({
   item, actionCard
 }) => {
   const [errorImage, setErrorImage] = useState(false)
+  const [background, setBackground] = useState(false)
 
   /**
    * Function when image no found.
@@ -21,12 +22,22 @@ const Card = ({
     setErrorImage(true)
   }
 
+  /**
+   * On action card.
+   * @returns {void} .
+   */
+  const onActionCard = () => {
+    actionCard(item)
+    if (background) setBackground(false)
+    else setBackground(styles.Background)
+  }
+
   return (
     <div
       role="button"
       tabIndex={0}
-      className={styles.CardContainer}
-      onClick={actionCard}
+      className={[styles.CardContainer, background || ''].join(' ')}
+      onClick={() => onActionCard(item)}
     >
       <p className={styles.Id}>{item.id}</p>
       <div className={styles.Header}>

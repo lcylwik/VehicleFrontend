@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 10px
 }
 
 .Button {
@@ -53,6 +54,43 @@
   margin: 40px 4px 0;
 }
 
+.ContainerDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ContainerDate > p{
+  font-family: ModernEra;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.DatePicker {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.ErrorMessage {
+  font-family: 'ModernEra';
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e02020;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Top {
+  margin-top: 25px;
+}
+
 .Close {
   outline: none;
   cursor: pointer;
@@ -67,4 +105,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 700px) {
+  .ContainerDate {
+     flex-direction: row;
+  }
 }

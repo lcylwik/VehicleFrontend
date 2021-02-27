@@ -1,50 +1,54 @@
+/* eslint-disable no-underscore-dangle */
+import axios from 'axios'
+
 /**
  * Make a request
- * @param {string} endpoint - endpoint to create a request
- * @param {Object} options - Body request
+ * @param {Object} newData - Body request
  * @param {Function} success .
  * @param {Function} error .
  * @returns {Object} return object
  */
-const callApi = async (endpoint, options, success, error) => {
+const updateVehicles = async (newData, success, error) => {
   try {
-    const url = `${process.env.REACT_APP_API_URL}${endpoint}`
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok) {
+    const config = {}
+    const body = {
+      ...newData
+    }
+    const url = `${process.env.REACT_APP_API_URL}vehicle/${newData._id}`
+    const response = await axios.put(url, body, config)
+    const { data } = response
+    if (response.statusText === 'OK') {
       success && success(data)
     } else {
       error && error(data)
     }
   } catch (err) {
-    error && error(err)
+    const { data } = err.response
+    error && error(data)
   }
 }
 
 /**
- * Get Vehicles
- * @param {String} endpoint .
+ * Make a request
  * @param {Function} success .
  * @param {Function} error .
- * @returns {Object} Vehicles Object
+ * @returns {Object} return object
  */
-const getVehicles = (endpoint, success, error) => callApi(endpoint, {
-  method: 'GET',
-}, success, error)
-
-/**
- * Update Vehicles
- * @param {String} endpoint .
- * @param {String} data .
- * @param {Function} success .
- * @param {Function} error .
- * @returns {Object} Vehicles Object
- */
-const updateVehicles = (endpoint, data, success, error) => callApi(endpoint, {
-  method: 'POST',
-  body: JSON.stringify({
-    data
-  }),
-}, success, error)
+const getVehicles = async (success, error) => {
+  try {
+    const config = {}
+    const url = `${process.env.REACT_APP_API_URL}vehicles`
+    const response = await axios.get(url, config)
+    const { data } = response
+    if (response.statusText === 'OK') {
+      success && success(data)
+    } else {
+      error && error(data)
+    }
+  } catch (err) {
+    const { data } = err.response
+    error && error(data)
+  }
+}
 
 export { getVehicles, updateVehicles }

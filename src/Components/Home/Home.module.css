@@ -18,16 +18,16 @@
   font-size: 30px;
 }
 
-@media(max-width: 350px){
-  .Wrapper {
-    
-  }
-}
-
-
-@media(min-width: 700px){
-  .Wrapper {
-   
-  }
+.ErrorMessage {
+  font-family: 'ModernEra';
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e02020;
+  text-align: center;
+  margin-top: 25px;
 }
 
